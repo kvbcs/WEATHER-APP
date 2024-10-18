@@ -12,13 +12,11 @@ export const MainCard = ({
 }) => {
 	return (
 		<div className={styles.wrapper}>
-			<h1 className={styles.location}>
-				{city}, {country}
-			</h1>
+			<h1 className={styles.location}>{city}, {country}</h1>
 			<p className={styles.description}>{description}</p>
 			<Image
 				width={300}
-        height={300}
+				height={300}
 				src={`/icons/${iconName}.svg`}
 				alt="weatherIcon"
 			/>
