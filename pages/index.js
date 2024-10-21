@@ -45,7 +45,7 @@ export const App = () => {
 				city={weatherData.name}
 				country={weatherData.country}
 				// description={weatherData.weather[0].description}
-				iconName={weatherData.hourly.weather_code[0].icon}
+				iconName={weatherData.hourly.weather_code[0]}
 				unitSystem={unitSystem}
 				weatherData={weatherData}
 			/>
@@ -84,7 +84,7 @@ export const App = () => {
 			/>
 		</ErrorScreen>
 	) : (
-		<LoadingScreen loadingMessage="Loading data..." />
+		<LoadingScreen loadingMessage="Chargement des données..." />
 	);
 };
 
