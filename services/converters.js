@@ -21,18 +21,20 @@ export const degToCompass = (num) => {
 		"SE",
 		"SSE",
 		"S",
-		"SSW",
-		"SW",
-		"WSW",
-		"W",
-		"WNW",
-		"NW",
-		"NNW",
+		"SSO",
+		"SO",
+		"OSO",
+		"O",
+		"ONO",
+		"NO",
+		"NNO",
 	];
 	return arr[val % 16];
 };
 
 export const unixToLocalTime = (unixSeconds, timezone) => {
+	timezone = 7200;
+	unixSeconds = 1698067200;
 	let time = new Date((unixSeconds + timezone) * 1000)
 		.toISOString()
 		.match(/(\d{2}:\d{2})/)[0];

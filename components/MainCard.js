@@ -20,7 +20,7 @@ export const MainCard = ({ city, iconName, unitSystem, weatherData }) => {
 				°{unitSystem == "metric" ? "C" : "F"}
 			</h1>
 			<p>
-				Feels like{" "}
+				Ressenti {""}
 				{unitSystem == "metric"
 					? Math.round(weatherData.current.apparent_temperature)
 					: Math.round(
