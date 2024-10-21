@@ -26,7 +26,7 @@ export const App = () => {
 				body: JSON.stringify({ cityInput }),
 			});
 			const data = await res.json();
-			console.log("ici data", data);
+			console.log(data);
 
 			setWeatherData({ ...data });
 			setCityInput("");
@@ -43,9 +43,9 @@ export const App = () => {
 		<div className={styles.wrapper}>
 			<MainCard
 				city={weatherData.name}
-				country="France"
-				description={weatherData.weather[0].description}
-				iconName={weatherData.weather[0].icon}
+				country={weatherData.country}
+				// description={weatherData.weather[0].description}
+				iconName={weatherData.hourly.weather_code[0].icon}
 				unitSystem={unitSystem}
 				weatherData={weatherData}
 			/>
