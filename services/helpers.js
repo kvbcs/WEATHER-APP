@@ -11,7 +11,7 @@ export const getWindSpeed = (unitSystem, windInMps) =>
 export const getVisibility = (unitSystem, visibilityInMeters) =>
 	unitSystem == "metric"
 		? (visibilityInMeters / 10000).toFixed(1)
-		: kmToMiles(visibilityInMeters / 1000);
+		: kmToMiles(visibilityInMeters / 10000);
 
 export const getTime = (unitSystem, currentTime, timezone) =>
 	unitSystem == "metric"
@@ -37,7 +37,7 @@ export const getWeekDay = (weatherData) => {
 	];
 	return weekday[
 		new Date(
-			(weatherData.utc_offset_seconds + weatherData.hourly.time[0]) * 1000
+			(weatherData.utc_offset_seconds + weatherData.current.time) * 1000
 		).getUTCDay()
 	];
 };
