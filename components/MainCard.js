@@ -5,7 +5,7 @@ import styles from "./MainCard.module.css";
 export const MainCard = ({ city, iconName, unitSystem, weatherData }) => {
 	return (
 		<div className={styles.wrapper}>
-			<h1 className={styles.location}>Chambéry, France</h1>
+			<h1 className={styles.location}>{city}, France</h1>
 			{/* <p className={styles.description}>{description}</p> */}
 			<Image
 				width={300}

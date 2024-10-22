@@ -13,7 +13,7 @@ import { ErrorScreen } from "../components/ErrorScreen";
 import styles from "../styles/Home.module.css";
 
 export const App = () => {
-	const [cityInput, setCityInput] = useState("Paris");
+	const [cityInput, setCityInput] = useState("");
 	const [triggerFetch, setTriggerFetch] = useState(true);
 	const [weatherData, setWeatherData] = useState();
 	const [unitSystem, setUnitSystem] = useState("metric");
@@ -29,7 +29,7 @@ export const App = () => {
 			console.log(data);
 
 			setWeatherData({ ...data });
-			setCityInput("");
+			setCityInput("Paris");
 		};
 		getData();
 	}, [triggerFetch]);
@@ -42,7 +42,7 @@ export const App = () => {
 	return weatherData && !weatherData.message ? (
 		<div className={styles.wrapper}>
 			<MainCard
-				city={weatherData.name}
+				city={cityInput}
 				country={weatherData.country}
 				// description={weatherData.weather[0].description}
 				iconName={weatherData.hourly.weather_code[0]}
