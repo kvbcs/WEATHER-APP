@@ -29,7 +29,7 @@ export const App = () => {
 			console.log(data);
 
 			setWeatherData({ ...data });
-			setCityInput("Paris");
+			setCityInput("Chambéry");
 		};
 		getData();
 	}, [triggerFetch]);

@@ -15,16 +15,16 @@ export const MainCard = ({ city, iconName, unitSystem, weatherData }) => {
 			/>
 			<h1 className={styles.temperature}>
 				{unitSystem == "metric"
-					? Math.round(weatherData.current.temperature_2m)
-					: Math.round(ctoF(weatherData.current.temperature_2m))}
+					? Math.round(weatherData.hourly.temperature_2m[0])
+					: Math.round(ctoF(weatherData.hourly.temperature_2m[0]))}
 				°{unitSystem == "metric" ? "C" : "F"}
 			</h1>
 			<p>
 				Ressenti {""}
 				{unitSystem == "metric"
-					? Math.round(weatherData.current.apparent_temperature)
+					? Math.round(weatherData.hourly.apparent_temperature[0])
 					: Math.round(
-							ctoF(weatherData.current.apparent_temperature)
+							ctoF(weatherData.hourly.apparent_temperature[0])
 					  )}
 				°{unitSystem == "metric" ? "C" : "F"}
 			</p>
