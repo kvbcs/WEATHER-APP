@@ -10,7 +10,7 @@ export const MainCard = ({ city, iconName, unitSystem, weatherData }) => {
 			<Image
 				width={300}
 				height={300}
-				src={`/icons/${iconName}.svg`}
+				src={`/icons/01d.svg`} //Précédemment iconName
 				alt="Icône météo"
 			/>
 			<h1 className={styles.temperature}>
