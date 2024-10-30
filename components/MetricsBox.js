@@ -32,7 +32,7 @@ export const MetricsBox = ({ weatherData, unitSystem }) => {
 				metric={degToCompass(weatherData.current.wind_direction_10m)}
 			/>
 			<MetricsCard
-				title={"Visibility"}
+				title={"Visibilité"}
 				iconSrc={"/icons/binocular.png"}
 				metric={getVisibility(
 					unitSystem,

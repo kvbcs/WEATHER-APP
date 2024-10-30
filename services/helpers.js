@@ -10,8 +10,8 @@ export const getWindSpeed = (unitSystem, windInMps) =>
 
 export const getVisibility = (unitSystem, visibilityInMeters) =>
 	unitSystem == "metric"
-		? (visibilityInMeters / 10000).toFixed(1)
-		: kmToMiles(visibilityInMeters / 10000);
+		? (visibilityInMeters / 1000).toFixed(1)
+		: kmToMiles(visibilityInMeters / 1000);
 
 export const getTime = (unitSystem, currentTime, timezone) =>
 	unitSystem == "metric"
