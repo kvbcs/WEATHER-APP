@@ -1,18 +1,22 @@
 .wrapper {
-  text-align: center;
-  padding: 30px;
+	text-align: center;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .location {
-  font-size: 38px;
-  margin-bottom: 10px;
+	font-size: 38px;
+	margin-bottom: 10px;
 }
 
 .description {
-  font-size: 24px;
-  margin-bottom: 20px;
+	font-size: 24px;
+	margin-bottom: 20px;
 }
 
 .temperature {
-  font-size: 84px;
+	font-size: 84px;
 }

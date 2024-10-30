@@ -21,22 +21,23 @@ export const degToCompass = (num) => {
 		"SE",
 		"SSE",
 		"S",
-		"SSW",
-		"SW",
-		"WSW",
-		"W",
-		"WNW",
-		"NW",
-		"NNW",
+		"SSO",
+		"SO",
+		"OSO",
+		"O",
+		"ONO",
+		"NO",
+		"NNO",
 	];
 	return arr[val % 16];
 };
 
 export const unixToLocalTime = (unixSeconds, timezone) => {
+	timezone = 7200;
+	// unixSeconds = weatherData.current.time;
 	let time = new Date((unixSeconds + timezone) * 1000)
 		.toISOString()
 		.match(/(\d{2}:\d{2})/)[0];
-	
 
 	return time.startsWith("0") ? time.substring(1) : time;
 };
